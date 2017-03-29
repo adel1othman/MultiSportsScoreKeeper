@@ -70,21 +70,22 @@ public class FootballFragment extends Fragment {
             public void run() {
                 myTime += 1;
                 mySec += 1;
-                if (mySec == 5){
+                if (mySec == 60){
                     myMin += 1;
                     mySec = 0;
                 }
                 timer.setText(myMin + ":" + mySec);
-                progressBar.setMax(16);
+                progressBar.setMax(5400);
                 progressBar.setProgress(myTime);
-                if (myTime == 8){
+                if (myTime == 2700){
                     start.setEnabled(true);
                     pause.setEnabled(false);
                     start.setText("CONTINUE");
                     half.setText("HALF");
                     timer.setText("TIME");
                     myHandler.removeCallbacks(myRunnable);
-                }else if (myTime == 16){
+                }else if (myTime == 5400){
+                    myHandler.removeCallbacks(myRunnable);
                     start.setEnabled(false);
                     pause.setEnabled(false);
                     half.setText("FULL");
