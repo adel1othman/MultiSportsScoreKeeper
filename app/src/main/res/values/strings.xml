@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MultiSportsScoreKeeper</string>
+    <string name="football">Football</string>
+    <string name="basketball">Basketball</string>
+    <string name="volleyball">Volleyball</string>
+    <string name="welcome1">welcome to</string>
+    <string name="welcome2">multi sports</string>
+    <string name="welcome3">score keeper</string>
+    <string name="syr">syr</string>
+    <string name="cro">cro</string>
+    <string name="zero">0</string>
+    <string name="start">START</string>
+    <string name="pause">PAUSE</string>
+    <string name="reset">RESET</string>
+    <string name="half">1ST Half</string>
+    <string name="startTime">0:0</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_football"
+        android:icon="@drawable/ic_football_ball"
+        android:title="@string/football" />
+
+    <item
+        android:id="@+id/navigation_basketball"
+        android:icon="@drawable/ic_basketball"
+        android:title="@string/basketball" />
+
+    <item
+        android:id="@+id/navigation_volleyball"
+        android:icon="@drawable/ic_volleyball"
+        android:title="@string/volleyball" />
+
+</menu>
