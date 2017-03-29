@@ -51,198 +51,172 @@
             android:layout_marginLeft="@dimen/dp5"/>
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:id="@+id/logoLay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/timer"
-        android:layout_marginBottom="@dimen/dp10">
+        android:layout_marginBottom="@dimen/dp10"
+        android:baselineAligned="false">
 
-        <TextView
-            android:id="@+id/syrTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:text="@string/syr"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/sp16"
-            android:layout_centerVertical="true"/>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-        <ImageView
-            android:id="@+id/syrLogo"
-            android:layout_width="@dimen/dp75"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/syrTxt"
-            android:layout_toEndOf="@+id/syrTxt"
-            android:src="@drawable/syria"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:contentDescription="@string/app_name"/>
+            <TextView
+                android:id="@+id/syrTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/syr"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp16"/>
+        </RelativeLayout>
 
-        <ImageView
-            android:layout_width="@dimen/dp30"
-            android:layout_height="wrap_content"
-            android:src="@drawable/vs"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:layout_centerInParent="true"
-            android:contentDescription="@string/app_name" />
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-        <ImageView
-            android:id="@+id/croLogo"
-            android:layout_width="@dimen/dp84"
-            android:layout_height="wrap_content"
-            android:layout_toLeftOf="@+id/croTxt"
-            android:layout_toStartOf="@+id/croTxt"
-            android:adjustViewBounds="true"
-            android:contentDescription="@string/app_name"
-            android:scaleType="centerCrop"
-            android:src="@drawable/croatia" />
+            <ImageView
+                android:id="@+id/syrLogo"
+                android:layout_width="@dimen/dp75"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/syria"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/app_name"/>
+        </RelativeLayout>
 
-        <TextView
-            android:id="@+id/croTxt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:text="@string/cro"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/sp16"
-            android:layout_centerVertical="true"/>
-    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-    <!--<LinearLayout
+            <ImageView
+                android:layout_width="@dimen/dp30"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vs"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_centerInParent="true"
+                android:contentDescription="@string/app_name" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/croLogo"
+                android:layout_width="@dimen/dp84"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"
+                android:scaleType="centerCrop"
+                android:src="@drawable/croatia" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/croTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/cro"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/sp16"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scoreLay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="@dimen/dp10">
+        android:layout_below="@+id/logoLay"
+        android:baselineAligned="false"
+        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:text="@string/syr"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/sp16"
-            android:layout_gravity="center"/>
-
-        <ImageView
-            android:id="@+id/syrLogo"
-            android:layout_width="@dimen/dp75"
-            android:layout_height="wrap_content"
-            android:src="@drawable/syria"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:contentDescription="@string/app_name"/>
-
-        <ImageView
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/vs"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:layout_marginStart="@dimen/dp50"
-            android:layout_marginLeft="@dimen/dp50"
-            android:layout_marginEnd="@dimen/dp50"
-            android:layout_marginRight="@dimen/dp50"
-            android:contentDescription="@string/app_name" />
+            android:layout_weight="1">
 
-        <ImageView
-            android:id="@+id/croLogo"
-            android:layout_width="@dimen/dp75"
+            <TextView
+                android:id="@+id/teamARslt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/zero"
+                android:textSize="@dimen/sp40"
+                android:textColor="@android:color/white"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/croatia"
-            android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
-            android:contentDescription="@string/app_name"/>
+            android:layout_weight="1">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/activity_horizontal_margin"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginEnd="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:text="@string/cro"
-            android:textStyle="bold"
-            android:textAllCaps="true"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/sp16"
-            android:layout_gravity="center"/>
-    </LinearLayout>-->
-
-    <TextView
-        android:id="@+id/teamARslt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/logoLay"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="@dimen/dp88"
-        android:layout_marginLeft="@dimen/dp88"
-        android:text="@string/zero"
-        android:textSize="@dimen/sp40"
-        android:textColor="@android:color/white"/>
-
-    <TextView
-        android:id="@+id/teamBRslt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/logoLay"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginEnd="@dimen/dp95"
-        android:layout_marginRight="@dimen/dp95"
-        android:text="@string/zero"
-        android:textSize="@dimen/sp40"
-        android:textColor="@android:color/white"/>
+            <TextView
+                android:id="@+id/teamBRslt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/zero"
+                android:textSize="@dimen/sp40"
+                android:textColor="@android:color/white"/>
+        </RelativeLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/goalsLay"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/teamARslt"
-        android:layout_centerHorizontal="true"
+        android:baselineAligned="false"
+        android:layout_below="@+id/scoreLay"
         android:layout_marginTop="@dimen/dp95">
 
-        <ImageView
-            android:id="@+id/teamAGoal"
-            android:layout_width="@dimen/dp50"
-            android:layout_height="@dimen/dp50"
-            android:src="@drawable/goal"
-            android:layout_marginEnd="@dimen/dp60"
-            android:layout_marginRight="@dimen/dp60"
-            android:contentDescription="@string/app_name"/>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
 
-        <ImageView
-            android:id="@+id/teamBGoal"
-            android:layout_width="@dimen/dp50"
-            android:layout_height="@dimen/dp50"
-            android:src="@drawable/goal"
-            android:layout_marginStart="@dimen/dp60"
-            android:layout_marginLeft="@dimen/dp60"
-            android:contentDescription="@string/app_name"/>
+            <ImageView
+                android:id="@+id/teamAGoal"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                android:layout_centerInParent="true"
+                android:src="@drawable/goal"
+                android:contentDescription="@string/app_name"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/teamBGoal"
+                android:layout_width="@dimen/dp50"
+                android:layout_height="@dimen/dp50"
+                android:layout_centerInParent="true"
+                android:src="@drawable/goal"
+                android:contentDescription="@string/app_name"/>
+        </RelativeLayout>
+
     </LinearLayout>
 
     <LinearLayout
