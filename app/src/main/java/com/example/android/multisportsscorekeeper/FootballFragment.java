@@ -18,6 +18,8 @@ import android.widget.TextView;
 
 import java.util.concurrent.TimeUnit;
 
+import static android.R.attr.onClick;
+
 /**
  * Created by Adel on 3/27/2017.
  */
@@ -121,9 +123,13 @@ public class FootballFragment extends Fragment {
             public void onClick(View v) {
                 if (pause.getText().equals("PAUSE")){
                     pause.setText("CONTINUE");
+                    teamAGoal.setEnabled(false);
+                    teamBGoal.setEnabled(false);
                     myHandler.removeCallbacks(myRunnable);
                 }else {
                     pause.setText("PAUSE");
+                    teamAGoal.setEnabled(true);
+                    teamBGoal.setEnabled(true);
                     myHandler.postDelayed(myRunnable, 1000);
                 }
             }
