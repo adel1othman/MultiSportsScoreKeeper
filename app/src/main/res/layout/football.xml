@@ -33,7 +33,7 @@
             android:id="@+id/half"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/half"
+            android:text="@string/firstHalf"
             android:textColor="@color/myOrange"
             android:textStyle="bold"
             android:textSize="@dimen/sp16"

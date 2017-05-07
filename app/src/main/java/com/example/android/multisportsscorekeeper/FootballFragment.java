@@ -94,16 +94,16 @@ public class FootballFragment extends Fragment {
                 if (myTime == 2700){
                     start.setEnabled(true);
                     pause.setEnabled(false);
-                    start.setText("CONTINUE");
-                    half.setText("HALF");
-                    timer.setText("TIME");
+                    start.setText(R.string.cont);
+                    half.setText(R.string.half);
+                    timer.setText(R.string.time);
                     myHandler.removeCallbacks(myRunnable);
                 }else if (myTime == 5400){
                     myHandler.removeCallbacks(myRunnable);
                     start.setEnabled(false);
                     pause.setEnabled(false);
-                    half.setText("FULL");
-                    timer.setText("TIME");
+                    half.setText(R.string.full);
+                    timer.setText(R.string.time);
 
                 }else {
                     myHandler.postDelayed(this, 1000);
@@ -127,7 +127,7 @@ public class FootballFragment extends Fragment {
                 }else {
                     start.setEnabled(false);
                     pause.setEnabled(true);
-                    half.setText("2ND Half");
+                    half.setText(R.string.secondHalf);
                     timer.setText(myMin + ":" + mySec);
                     myHandler.postDelayed(myRunnable, 1000);
                 }
@@ -138,12 +138,12 @@ public class FootballFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (pause.getText().equals("PAUSE")){
-                    pause.setText("CONTINUE");
+                    pause.setText(R.string.cont);
                     teamAGoal.setEnabled(false);
                     teamBGoal.setEnabled(false);
                     myHandler.removeCallbacks(myRunnable);
                 }else {
-                    pause.setText("PAUSE");
+                    pause.setText(R.string.pause);
                     teamAGoal.setEnabled(true);
                     teamBGoal.setEnabled(true);
                     myHandler.postDelayed(myRunnable, 1000);
@@ -157,9 +157,9 @@ public class FootballFragment extends Fragment {
                 myHandler.removeCallbacks(myRunnable);
                 start.setEnabled(true);
                 pause.setEnabled(false);
-                start.setText("START");
-                pause.setText("PAUSE");
-                half.setText("1ST Half");
+                start.setText(R.string.start);
+                pause.setText(R.string.pause);
+                half.setText(R.string.firstHalf);
                 timer.setText(R.string.startTime);
                 progressBar.setProgress(0);
                 myMin = 0;
@@ -191,7 +191,7 @@ public class FootballFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 rsltA += 1;
-                teamARslt.setText("" + rsltA);
+                teamARslt.setText(String.valueOf(rsltA));
             }
         });
 
@@ -199,7 +199,7 @@ public class FootballFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 rsltB += 1;
-                teamBRslt.setText("" + rsltB);
+                teamBRslt.setText(String.valueOf(rsltB));
             }
         });
 
@@ -207,7 +207,7 @@ public class FootballFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 redA += 1;
-                redCardCounterA.setText("" + redA);
+                redCardCounterA.setText(String.valueOf(redA));
             }
         });
 
@@ -215,7 +215,7 @@ public class FootballFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 redB += 1;
-                redCardCounterB.setText("" + redB);
+                redCardCounterB.setText(String.valueOf(redB));
             }
         });
 
@@ -223,7 +223,7 @@ public class FootballFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 yellowA += 1;
-                yellowCardCounterA.setText("" + yellowA);
+                yellowCardCounterA.setText(String.valueOf(yellowA));
             }
         });
 
@@ -231,7 +231,7 @@ public class FootballFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 yellowB += 1;
-                yellowCardCounterB.setText("" + yellowB);
+                yellowCardCounterB.setText(String.valueOf(yellowB));
             }
         });
 

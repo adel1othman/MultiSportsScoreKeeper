@@ -12,6 +12,11 @@
     <string name="start">START</string>
     <string name="pause">PAUSE</string>
     <string name="reset">RESET</string>
-    <string name="half">1ST Half</string>
+    <string name="firstHalf">1ST Half</string>
+    <string name="secondHalf">2ND Half</string>
     <string name="startTime">0:0</string>
+    <string name="cont">CONTINUE</string>
+    <string name="half">HALF</string>
+    <string name="time">TIME</string>
+    <string name="full">FULL</string>
 </resources>
