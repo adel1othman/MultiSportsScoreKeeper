@@ -30,12 +30,12 @@ public class FootballFragment extends Fragment {
     private Handler myHandler = new Handler();
     Runnable myRunnable;
     ProgressBar progressBar;
-    TextView half, timer, teamARslt, teamBRslt;
-    ImageView teamAGoal, teamBGoal;
+    TextView half, timer, teamARslt, teamBRslt, redCardCounterA, redCardCounterB, yellowCardCounterA, yellowCardCounterB;
+    ImageView teamAGoal, teamBGoal, teamARedCard, teamBRedCard, teamAYellowCard, teamBYellowCard;
     Button pause, start, reset;
     private long myMin = 0, mySec = 0;
     private int myTime = 0;
-    private int rsltA, rsltB;
+    private int rsltA, rsltB, redA, redB, yellowA, yellowB;
     /*public static FootballFragment newInstance() {
         FootballFragment fragment = new FootballFragment();
         return fragment;
@@ -56,8 +56,16 @@ public class FootballFragment extends Fragment {
         timer = (TextView) rootView.findViewById(R.id.time);
         teamAGoal = (ImageView) rootView.findViewById(R.id.teamAGoal);
         teamBGoal = (ImageView) rootView.findViewById(R.id.teamBGoal);
+        teamARedCard = (ImageView) rootView.findViewById(R.id.teamARedCard);
+        teamBRedCard = (ImageView) rootView.findViewById(R.id.teamBRedCard);
+        teamAYellowCard = (ImageView) rootView.findViewById(R.id.teamAYellowCard);
+        teamBYellowCard = (ImageView) rootView.findViewById(R.id.teamBYellowCard);
         teamARslt = (TextView) rootView.findViewById(R.id.teamARslt);
         teamBRslt = (TextView) rootView.findViewById(R.id.teamBRslt);
+        redCardCounterA = (TextView) rootView.findViewById(R.id.redCardCounterA);
+        redCardCounterB = (TextView) rootView.findViewById(R.id.redCardCounterB);
+        yellowCardCounterA = (TextView) rootView.findViewById(R.id.yellowCardCounterA);
+        yellowCardCounterB = (TextView) rootView.findViewById(R.id.yellowCardCounterB);
         pause = (Button) rootView.findViewById(R.id.pauseBtn);
         start = (Button) rootView.findViewById(R.id.startBtn);
         reset = (Button) rootView.findViewById(R.id.resetBtn);
@@ -66,6 +74,10 @@ public class FootballFragment extends Fragment {
         pause.setEnabled(false);
         teamAGoal.setEnabled(false);
         teamBGoal.setEnabled(false);
+        teamARedCard.setEnabled(false);
+        teamBRedCard.setEnabled(false);
+        teamAYellowCard.setEnabled(false);
+        teamBYellowCard.setEnabled(false);
 
         myRunnable = new Runnable() {
             @Override
@@ -104,6 +116,10 @@ public class FootballFragment extends Fragment {
             public void onClick(View v) {
                 teamAGoal.setEnabled(true);
                 teamBGoal.setEnabled(true);
+                teamARedCard.setEnabled(true);
+                teamBRedCard.setEnabled(true);
+                teamAYellowCard.setEnabled(true);
+                teamBYellowCard.setEnabled(true);
                 if (start.getText().equals("START")){
                     start.setEnabled(false);
                     pause.setEnabled(true);
@@ -153,8 +169,21 @@ public class FootballFragment extends Fragment {
                 teamARslt.setText("0");
                 rsltB = 0;
                 teamBRslt.setText("0");
+                redA = 0;
+                redCardCounterA.setText("0");
+                redB = 0;
+                redCardCounterB.setText("0");
+                yellowA = 0;
+                yellowCardCounterA.setText("0");
+                yellowB = 0;
+                yellowCardCounterB.setText("0");
                 teamAGoal.setEnabled(false);
                 teamBGoal.setEnabled(false);
+                teamARedCard.setEnabled(false);
+                teamBRedCard.setEnabled(false);
+                teamAYellowCard.setEnabled(false);
+                teamBYellowCard.setEnabled(false);
+
             }
         });
 
@@ -171,6 +200,38 @@ public class FootballFragment extends Fragment {
             public void onClick(View v) {
                 rsltB += 1;
                 teamBRslt.setText("" + rsltB);
+            }
+        });
+
+        teamARedCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redA += 1;
+                redCardCounterA.setText("" + redA);
+            }
+        });
+
+        teamBRedCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redB += 1;
+                redCardCounterB.setText("" + redB);
+            }
+        });
+
+        teamAYellowCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                yellowA += 1;
+                yellowCardCounterA.setText("" + yellowA);
+            }
+        });
+
+        teamBYellowCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                yellowB += 1;
+                yellowCardCounterB.setText("" + yellowB);
             }
         });
 
